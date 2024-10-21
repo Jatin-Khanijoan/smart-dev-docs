@@ -2,33 +2,42 @@
 sidebar_position: 3
 ---
 
-# Create a Blog Post
+# Experienced User Flow
 
-Docusaurus creates a **page for each blog post**, but also a **blog index page**, a **tag system**, an **RSS** feed...
+Experienced users can deploy projects on their own cloud accounts (AWS, GCP, Azure) using access and secret keys.
 
-## Create your first Post
+## 2.1 Deployment using UI
 
-Create a file at `blog/2021-02-28-greetings.md`:
+1. Enter the GitHub repository link (repository must contain a .yaml file in a format mentioned on website)
+2. Provide access key and secret key of your cloud provider.
+3. Majs generates a main.tf file from the .yaml file and deploys the application.
 
-```md title="blog/2021-02-28-greetings.md"
----
-slug: greetings
-title: Greetings!
-authors:
-  - name: Joel Marcey
-    title: Co-creator of Docusaurus 1
-    url: https://github.com/JoelMarcey
-    image_url: https://github.com/JoelMarcey.png
-  - name: Sébastien Lorber
-    title: Docusaurus maintainer
-    url: https://sebastienlorber.com
-    image_url: https://github.com/slorber.png
-tags: [greetings]
----
+## 2.2 Deployment using CLI
 
-Congratulations, you have made your first post!
+### Installation and Configuration:
 
-Feel free to play around and edit this post as much as you like.
+```
+majs
 ```
 
-A new blog post is now available at [http://localhost:3000/blog/greetings](http://localhost:3000/blog/greetings).
+```
+majs --help
+```
+
+```
+majs configure
+```
+
+### Deployment process:
+
+```
+majs init
+```
+
+```
+majs build
+```
+
+```
+majs deploy
+```

@@ -2,56 +2,40 @@
 sidebar_position: 2
 ---
 
-# Create a Document
+# Beginner User Flow
 
-Documents are **groups of pages** connected through:
+## 1.1 Deployment using UI
 
-- a **sidebar**
-- **previous/next navigation**
-- **versioning**
+- Users can deploy projects by providing a GitHub repository link on the Majs website.
+- The application will be deployed on Majs' on-premise PC servers.
+- A URL with the top-level domain 'majs.live' will be provided.
 
-## Create your first Doc
+## 1.2 Deployment using CLI
 
-Create a Markdown file at `docs/hello.md`:
+### Installation and Configuration:
 
-```md title="docs/hello.md"
-# Hello
-
-This is my **first Docusaurus document**!
+```
+majs
 ```
 
-A new document is now available at [http://localhost:3000/docs/hello](http://localhost:3000/docs/hello).
-
-## Configure the Sidebar
-
-Docusaurus automatically **creates a sidebar** from the `docs` folder.
-
-Add metadata to customize the sidebar label and position:
-
-```md title="docs/hello.md" {1-4}
----
-sidebar_label: 'Hi!'
-sidebar_position: 3
----
-
-# Hello
-
-This is my **first Docusaurus document**!
+```
+majs --help
 ```
 
-It is also possible to create your sidebar explicitly in `sidebars.js`:
+```
+majs configure
+```
 
-```js title="sidebars.js"
-export default {
-  tutorialSidebar: [
-    'intro',
-    // highlight-next-line
-    'hello',
-    {
-      type: 'category',
-      label: 'Tutorial',
-      items: ['tutorial-basics/create-a-document'],
-    },
-  ],
-};
+### Deployment process:
+
+```
+majs init
+```
+
+```
+majs build
+```
+
+```
+majs deploy
 ```
